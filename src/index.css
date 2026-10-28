@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-chalk text-ink font-sans antialiased; }
+  h1, h2, h3 { @apply font-display; }
+  ::selection { background: #F6E2A6; color: #0E2A24; }
+  :focus-visible { outline: 2px solid #E3A91B; outline-offset: 2px; }
+}
+
+@layer components {
+  /* Torn-receipt edge hanging under the invoice paper */
+  .paper-edge {
+    height: 8px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='8'><polygon points='0,0 16,0 8,8' fill='%23FBFAF6'/></svg>");
+    background-repeat: repeat-x;
+  }
+}
